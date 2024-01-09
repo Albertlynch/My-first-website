@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Albert's First Website</title>
+    <style>
+        /* Class Selector - to select elements with a specific class, write with (.) character followed by the class name */
+        .title {
+            text-align: center;
+            color: black;
+            font-size: 50px; /* Added 'px' to specify the font size unit */
+        }
+
+        .content {
+            text-align: center;
+            color: black;
+            font-size: 20px; /* Added 'px' to specify the font size unit */
+        }
+
+        /* Element Selector - to select the body element, just use the element name without any prefix */
+        body {
+            background-color: lightblue;
+            background-repeat: no-repeat;
+            background-size: cover; /* Changed from 100% to cover for better responsiveness */
+            margin: 0; /* Remove default margin for body */
+            text-align: center;
+        }
+
+        /* Added style for the image within the body */
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; /* Make sure the image doesn't exceed its container */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Styles for devices with a maximum width of 600px */
+            .title {
+                font-size: 30px; /* Adjust font size for smaller screens */
+            }
+
+            .content {
+                font-size: 16px; /* Adjust font size for smaller screens */
+            }
+
+            img {
+                width: 100%; /* Make images fill the screen on smaller devices */
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            /* Styles for devices with a minimum width of 601px and maximum width of 1024px */
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Albert's First Website</h1>
+    <p> This is my first website that I created! Currently, this is a static website, but as I learn how to code better, I will eventually turn this page into a beautiful dynamic website! </p>
+    <button id="myButton">Test Button</button>
+
+    <script>
+        // Function to be executed when the button is clicked
+        function handleClick() {
+            alert("button clicked");
+        }
+
+        // Get a reference to the button element
+        let button = document.getElementById('myButton');
+
+        // Add the event listener to the button
+        button.addEventListener('click', handleClick);
+
+        // After a certain condition or action, remove the event listener
+        function removeClickListener() {
+            // Remove the event listener
+            button.removeEventListener('click', handleClick);
+            alert("Event listener removed!");
+        }
+    </script>
+
+    <!-- Added the image tag with the correct syntax -->
+    <img src="https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?cs=srgb&dl=pexels-markus-spiske-1089438.jpg&fm=jpg"
+        class="img-fluid" alt="Responsive Image" style="position: absolute; bottom: 50px; left: 100px;" width="400" height="220">
+    <img src="IMG_0166.jpg" alt="This is my Dad(left), brother(middle), and myself(Right)"
+        style="position: absolute; bottom: 50px; right: 100px;" width="400" height="220">
+</body>
+
+<a href="https://github.com/Albertlynch/My-first-website" target="_blank">Click here to go to my github page!</a>f
+
+</html>
